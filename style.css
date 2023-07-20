@@ -1,0 +1,160 @@
+
+/* navigation bar */
+.navbar {
+    display: flex;
+    background-color: rgba(173, 168, 168, 0.379);
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: rgb(9, 184, 224);
+    margin-right: 30px;
+}
+
+/* header image and hover effect */
+
+
+.header-image {
+    position: relative;
+}
+
+.header-image img {
+    position: relative;
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.header-image:hover .hover-text {
+    color: white; 
+    background-color: rgba(0, 0, 0, 0.3); 
+}
+
+.header-image .hover-text {
+    position: absolute;
+    bottom: 35px; 
+    width: 100%; 
+    background-color: transparent;
+    color: transparent; 
+    font-size: 1em;
+    text-align: center;
+    padding: 10px 0; 
+}
+
+/* profile section */
+.profile {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    margin-top: 20px;
+    gap: 20px; 
+}
+
+.profile img {
+    width: auto;
+    height: 150px;
+    border-radius: 35%;
+}
+.description {
+    color: rgb(0, 175, 163);
+    font-size: small;
+    text-align: center; 
+    padding-bottom: 25px;
+    position: relative;
+}
+
+.description:after {
+    content: ''; 
+    position: absolute; 
+    bottom: 0;
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 80%; 
+    height: 2px; 
+    background-color: green; 
+}
+
+
+.projects{
+    margin-bottom: 35px;
+}
+.projects-title{
+    margin-top: 30px;
+    text-align: center;
+    color: rgb(0, 175, 163);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.table {
+    display: flex;
+    align-items: center;
+}
+.table img{
+    margin-top: 20px;
+    margin-bottom: 15px;
+    margin-left: 30%;
+    height: 30%;
+    width: 30%;
+    border-radius: 10%;
+    align-self: center;
+}
+.table .text{
+    margin-left: 10px;
+    color: rgb(0, 175, 163);
+    align-self: center;
+}
+
+.projects:after {
+    content: ''; 
+    position: absolute; 
+    left: 50%; 
+    transform: translateX(-50%);
+    width: 25%; 
+    height: 2px; 
+    margin-top: 2%;
+    background-color: green; 
+}
+
+
+.photos-title{
+    text-align: center;
+    color: rgb(0, 175, 163);
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.photo-table {
+    display: grid;
+    grid-gap: 10px; 
+    margin-bottom: 20px;
+}
+
+.photo-table img {
+    width: 100%; 
+    height: 100%;
+}
+
+/* When the viewport width is 800px or more, make 4 columns */
+@media (min-width: 800px) {
+    .photo-table {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* When the viewport width is between 400px and 800px, make 2 columns */
+@media (min-width: 400px) and (max-width: 799px) {
+    .photo-table {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* When the viewport width is less than 400px, make 1 column */
+@media (max-width: 399px) {
+    .photo-table {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
